@@ -1,0 +1,12 @@
+{
+  "name": "lunchtime",
+  "version": "1.0.0",
+  "description": "A slackbot that finds local restaurants to make a lunch suggestion",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/RoryDuncan/lunchtime",
+    "type": "git"
+  },
+  "author": "Rory Duncan <robust.rory@gmail.com>",
+  "license": "MIT"
+}
