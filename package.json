@@ -7,13 +7,20 @@
     "url": "https://github.com/RoryDuncan/lunchtime",
     "type": "git"
   },
+  "scripts": {
+    "start": "node --harmony index.js"
+  },
   "author": "Rory Duncan <robust.rory@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@google/maps": "^0.3.0",
     "body-parser": "^1.15.2",
     "botkit": "^0.4.0",
     "dotenv-safe": "^2.3.3",
     "express": "^4.14.0",
+    "express-http-proxy": "^0.10.1",
+    "firebase": "^3.5.3",
+    "lodash": "^4.16.4",
     "slack": "^7.7.3"
   }
 }
