@@ -41,7 +41,7 @@ const suggestions = {
   // retrieves a single random suggestion
   getOne: (payload, req, res) => {
     res.set('content-type', 'application/json')
-    let msg = {};
+    let msg = _.defaults({}, msgDefaults);
     let q = ref.once('value')
     q.then((snapshot) => {
       
