@@ -1,7 +1,7 @@
 
 const dotenv = require('dotenv')
 const ENV = process.env.NODE_ENV || 'development'
-
+const firebase = require('firebase');
 if (ENV === 'development') {
   dotenv.load()
   console.log("loading development environment")
@@ -25,7 +25,7 @@ const fireApp = firebase.initializeApp({
   apiKey: config.FIREBASE_KEY,
   databaseURL: `https://${config.FIREBASE_NAME}.firebaseio.com`,
 });
-const firebase = require('firebase');
+
 
 config.firebase = firebase;
 

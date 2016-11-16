@@ -6,7 +6,7 @@ const config = require('./src/config')
 const commands = require('./src/commands')
 const helpCommand = require('./src/commands/help')
 
-let bot = require('./src/bot')
+// let bot = require('./src/bot')
 
 let app = express()
 
