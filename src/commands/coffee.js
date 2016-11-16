@@ -1,14 +1,7 @@
 
 const config = require('../config')
 const _ = require('lodash')
-const firebase = require('firebase');
-
-// Initialize Firebase
-const fireApp = firebase.initializeApp({
-  apiKey: config.FIREBASE_KEY,
-  databaseURL: `https://${config("FIREBASE_NAME")}.firebaseio.com`,
-});
-const firedb = fireApp.database();
+const firedb = config("firebase").database();
 const ref = firedb.ref("coffee")
 const msgDefaults = {
   response_type: 'in_channel',

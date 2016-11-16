@@ -7,6 +7,8 @@ if (ENV === 'development') {
   console.log("loading development environment")
 }
 
+
+
 const config = {
   FIREBASE_KEY: process.env.FIREBASE_KEY,
   FIREBASE_NAME: process.env.FIREBASE_NAME,
@@ -17,6 +19,16 @@ const config = {
   SLACK_TOKEN: process.env.SLACK_TOKEN,
   ICON_EMOJI: ':fork_and_knife:'
 }
+
+// Initialize Firebase
+const fireApp = firebase.initializeApp({
+  apiKey: config.FIREBASE_KEY,
+  databaseURL: `https://${config.FIREBASE_NAME}.firebaseio.com`,
+});
+const firebase = require('firebase');
+
+config.firebase = firebase;
+
 
 module.exports = (key) => {
   if (!key) return config
