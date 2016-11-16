@@ -6,7 +6,7 @@ const ref = firedb.ref("coffee")
 const msgDefaults = {
   response_type: 'in_channel',
   username: 'Coffee Suggestion',
-  icon_emoji: "coffee"
+  icon_emoji: ":coffee:"
 }
 
 const randomInt = (ceil) => {
