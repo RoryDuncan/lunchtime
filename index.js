@@ -27,8 +27,8 @@ app.get('/places', (req, res) => {
 app.post('/commands/:command', (req, res) => {
   let payload = req.body
   var command = req.params.command || "help";
-
-  if (!payload || payload.token !== config('SLACK_TOKEN')) {
+  
+  if (!payload || payload.token !== config('SLACK_TOKEN') || command == "coffee") {
     let err = 'An invalid slash token was provided\n' +
               '   Is your Slack slash token correctly configured?'
     console.log(err)
